@@ -29,6 +29,7 @@ from peft import (
 )
 from peft.utils import TRANSFORMERS_MODELS_TO_LORA_TARGET_MODULES_MAPPING
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 _compute_dtype_map = {
     'fp32': torch.float32,
