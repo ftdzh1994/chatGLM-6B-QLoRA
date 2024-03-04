@@ -101,9 +101,9 @@ pip install accelerate==0.20.3
 进入本项目目录，训练启动命令如下：
 
 ```shell
-python3 train_qlora.py \
+CUDA_VISIBLE_DEVICES=2 nohup python3 train_qlora.py \
 --train_args_json chatGLM_6B_QLoRA.json \
---model_name_or_path THUDM/chatglm-6b \
+--model_name_or_path THUDM/chatglm2-6b \
 --train_data_path data/train.jsonl \
 --eval_data_path data/dev.jsonl \
 --lora_rank 4 \
